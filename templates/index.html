@@ -255,10 +255,12 @@
 						<div class="destination item">
 							<div class="destination_image">
 								<img src="{{baseUrl}}/{{finDest.img}}" alt="">
+								{% if finDest.offer%}
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+								{%endif%}
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{finDests.name}}</a></div>
+								<div class="destination_title"><a href="destinations.html">{{finDest.name}}</a></div>
 								<div class="destination_subtitle"><p>{{finDest.desc}}</p></div>
 								<div class="destination_price">From ${{finDest.price}}</div>
 							</div>

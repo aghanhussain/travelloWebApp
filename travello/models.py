@@ -7,3 +7,4 @@ class Destination:
     name : str
     id : int
     image = str
+    offer  = bool
