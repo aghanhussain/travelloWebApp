@@ -1,6 +1,9 @@
 
 {% load static %}
 {% static 'images' as baseUrl %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -251,18 +254,18 @@
 					<div class="destinations_container item_grid">
 
 						<!-- Destination -->
-						{% for finDest in finDests %}
+						{% for fin_Dest in fin_Dests %}
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{{baseUrl}}/{{finDest.img}}" alt="">
-								{% if finDest.offer%}
+								<img src="{{fin_Dest.image.url}}" alt="">
+								{% if finDest.offer %}
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
-								{%endif%}
+								{% endif %}
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{finDest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{finDest.desc}}</p></div>
-								<div class="destination_price">From ${{finDest.price}}</div>
+								<div class="destination_title"><a href="destinations.html">{{fin_Dest.name}}</a></div>
+								<div class="destination_subtitle"><p>{{fin_Dest.desc}}</p></div>
+								<div class="destination_price">From ${{fin_Dest.price}}</div>
 							</div>
 						</div>
 						{% endfor %}
